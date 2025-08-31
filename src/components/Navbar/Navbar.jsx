@@ -38,12 +38,12 @@ const Navbar = () => {
             </ul>
           </div>
           {/* CTA Button section */}
-          <div className="hidden lg:block space-x-6">
+          {/* <div className="hidden lg:block space-x-6">
             <button className="font-semibold">Sign in</button>
             <button className="text-white bg-secondary font-semibold rounded-full px-6 py-2 ">
               Register
             </button>
-          </div>
+          </div> */}
           {/* Mobile Hamburger Menu */}
           <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             <MdMenu className="text-4xl" />

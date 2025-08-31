@@ -1,7 +1,15 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ResponsiveMenu = ({ isOpen }) => {
+const ResponsiveMenu = ({ isOpen, toggleMenu }) => {
+  const menuItems = [
+    { id: 1, title: "Home", link: "#home" },
+    { id: 2, title: "Services", link: "#services" },
+    { id: 3, title: "Subjects", link: "#subjects" },
+    { id: 4, title: "Testimonials", link: "#testimonials" },
+    { id: 5, title: "Contact Us", link: "#contact" },
+  ];
+
   return (
     <AnimatePresence mode="wait">
       {isOpen && (
@@ -14,10 +22,17 @@ const ResponsiveMenu = ({ isOpen }) => {
         >
           <div className="text-xl font-semibold uppercase bg-primary text-black py-10 m-6 rounded-3xl">
             <ul className="flex flex-col justify-center items-center gap-10">
-              <li>Home</li>
-              <li>About</li>
-              <li>Service</li>
-              <li>Contact</li>
+              {menuItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.link}
+                    onClick={toggleMenu} // close menu after click
+                    className="hover:text-orange-600 duration-200"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </motion.div>

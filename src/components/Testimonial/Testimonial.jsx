@@ -1,33 +1,39 @@
 import React from "react";
 import Slider from "react-slick";
 
+// ✅ Import your local images
+import studentImg from "../../assets/student.jpg";
+import student1Img from "../../assets/student1.jpg";
+import student2Img from "../../assets/student2.jpg";
+import student3Img from "../../assets/student3.jpg";
+
 const TestimonialsData = [
   {
     id: 1,
-    name: "John Doe",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/101/101",
+    name: "— John L., High School Student",
+    text: "E-Tutor made learning so much easier! The lessons are clear and I can study at my own pace. My grades have improved a lot.",
+    img: student2Img,
     delay: 0.2,
   },
   {
     id: 2,
-    name: "Steve Smith",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/102/102",
+    name: "— Daniel M., College Freshman",
+    text: "E-Tutor made learning so much easier! The lessons are clear and I can study at my own pace. My grades have improved a lot.",
+    img: student3Img,
     delay: 0.5,
   },
   {
     id: 3,
-    name: "Kristen",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/104/104",
+    name: "— Kent R., 10th Grade Student",
+    text: "Thanks to E-Tutor, I finally feel confident in math. The practice exercises and one-on-one help really made a difference.",
+    img: studentImg,
     delay: 0.8,
   },
   {
     id: 5,
-    name: "Ariana",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/103/103",
+    name: "— Ariana T., Senior Student",
+    text: "What I like most is the flexibility. I can join classes anytime, anywhere. It feels like having a private tutor in my pocket.",
+    img: student1Img,
     delay: 1.1,
   },
 ];
@@ -71,7 +77,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="py-14 mb-10">
+    <div id="testimonials" className="py-14 mb-10">
       <div className="container">
         {/* header section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-6">
@@ -100,7 +106,7 @@ const Testimonial = () => {
                         <p className="text-xl font-bold text-black/80">
                           {item.name}
                         </p>
-                        <p>{item.name}</p>
+                        
                       </div>
                     </div>
                     {/* bottom section */}

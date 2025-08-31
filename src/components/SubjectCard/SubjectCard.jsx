@@ -64,7 +64,7 @@ const subjectList = [
 const SubjectCard = () => {
   return (
     <>
-      <div className="container py-14 md:py-24">
+      <div id="subjects" className="container py-14 md:py-24">
         {/* header section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
           <h1 className="uppercase font-semibold text-orange-500">
